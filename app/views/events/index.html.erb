@@ -4,7 +4,6 @@
 </p>
 <% @events.each do |current_event| %>
   <%= render 'single_event', event: current_event %>
-  <%= link_to 'Edit', edit_event_path(current_event.id) %> |
-  <%= link_to 'Delete', event_path(@event), method: :destroy, data: {confirm: "Are you sure you want to delete the event '#{@event.name}'? This cannot be undone!"} %>
+  <%= link_to 'Edit', event_path(current_event) %>
 
 <% end %>
